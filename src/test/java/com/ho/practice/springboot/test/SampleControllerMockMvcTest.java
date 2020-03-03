@@ -13,7 +13,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureMockMvc
-class SampleControllerTest {
+class SampleControllerMockMvcTest {
 
 	@Autowired
 	private MockMvc mockMvc;
