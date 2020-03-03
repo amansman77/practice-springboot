@@ -1,4 +1,4 @@
-package com.ho.practice.springboot;
+package com.ho.practice.springboot.properties;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

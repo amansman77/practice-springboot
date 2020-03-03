@@ -7,6 +7,14 @@ Spring Boot를 연습하는 공간입니다.
 - JUnit : Jupiter
 - Gradle : 6.0.1
 
+## Properties 예제
+
+`com.ho.practice.springboot.properties`에 구현
+
+## Test 예제
+
+`com.ho.practice.springboot.test`에 구현
+
 ## Troubleshooting
 
 ### JUnit 테스트 환경에서 Test resource가 동작하지 않음
@@ -27,3 +35,5 @@ IDE에서 Test run할 때, JUnit말고 Gradle test를 사용하니 원하는 결
 여기까지 `-classpath`옵션의 설정 순서에 영향이 있을 것으로 판단
 
 `bin\main`의 Output folder를 default로 설정하니 `-classpath`옵션에 `bin\test`가 먼저 설정되고 Test resource를 읽어오는것을 확인했음
+
+

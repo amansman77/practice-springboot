@@ -1,4 +1,4 @@
-package com.ho.practice.springboot;
+package com.ho.practice.springboot.properties;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
