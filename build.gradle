@@ -26,6 +26,9 @@ dependencies {
 	
 	// JQuery webjar 추가
 	implementation 'org.webjars.bower:jquery:3.4.1'
+	
+	// 동적 뷰를 위한 Thymeleaf 추가
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }
 
 test {

@@ -1,4 +1,4 @@
-package com.ho.practice.springboot.webmvc;
+package com.ho.practice.springboot.webmvc.controller;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+
+import com.ho.practice.springboot.webmvc.controller.UserSpringController;
 
 @WebMvcTest(value = UserSpringController.class)
 class UserSpringControllerTest {

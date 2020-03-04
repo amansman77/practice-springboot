@@ -1,4 +1,4 @@
-package com.ho.practice.springboot.webmvc;
+package com.ho.practice.springboot.webmvc.controller;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
