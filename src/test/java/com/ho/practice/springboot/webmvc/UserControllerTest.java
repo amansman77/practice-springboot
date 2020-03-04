@@ -5,6 +5,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.xpath;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ class UserControllerTest {
 	private MockMvc mockMvc;
 	
 	@Test
-	void testCreate() throws Exception {
+	void testCreate_JSON() throws Exception {
 		String userJson = "{\"username\":\"hosung\", \"password\" : \"123\"}";
 		mockMvc.perform(post("/users")
 				.contentType(MediaType.APPLICATION_JSON)
@@ -29,5 +30,19 @@ class UserControllerTest {
 			.andExpect(jsonPath("$.username", is(equalTo("hosung"))))
 			.andExpect(jsonPath("$.password", is(equalTo("123"))));
 	}
+	
+	@Test
+	void testCreate_XML() throws Exception {
+		// jackson-dataformat-xml 의존성을 추가하여, XML을 만들수 있는 HttpMessageConverter 추가해야함
+		String userJson = "{\"username\":\"hosung\", \"password\" : \"123\"}";
+		mockMvc.perform(post("/users")
+				.contentType(MediaType.APPLICATION_JSON)
+				.accept(MediaType.APPLICATION_XML)
+				.content(userJson))
+			.andExpect(status().isOk())
+			.andExpect(xpath("/User/username").string("hosung"))
+			.andExpect(xpath("/User/password").string("123"));
+	}
 
 }
+	

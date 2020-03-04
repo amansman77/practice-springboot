@@ -20,6 +20,9 @@ dependencies {
 	
 	// WebClient를 사용하기 위해 추가
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	
+	// XML을 만들수 있는 HttpMessageConverter 추가
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.6'
 }
 
 test {
