@@ -2,7 +2,9 @@ package com.ho.practice.springboot.webmvc.controller;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.xpath;
@@ -18,6 +20,14 @@ class UserControllerTest {
 
 	@Autowired
 	private MockMvc mockMvc;
+	
+	@Test
+	void testGet() throws Exception {
+		mockMvc.perform(get("/users"))
+			.andDo(print())
+			.andExpect(status().isOk())
+			.andExpect(jsonPath("$._links.self").exists());
+	}
 	
 	@Test
 	void testCreate_JSON() throws Exception {

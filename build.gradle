@@ -33,6 +33,9 @@ dependencies {
 	// HtmlUnit 의존성 추가
 	testImplementation 'org.seleniumhq.selenium:htmlunit-driver'
 	testImplementation 'net.sourceforge.htmlunit:htmlunit'
+	
+	// HATEOAS 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 }
 
 test {
