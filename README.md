@@ -21,7 +21,12 @@ Spring Boot를 연습하는 공간입니다.
 
 예제 목록
 - HATEOAS
+- HTML Unit : HTML의 테스트를 다양하게 할 수 있도록 지원
 - ...
+
+## Spring data 예제
+
+`com.ho.practice.springboot.data`에 구현
 
 ## Troubleshooting
 

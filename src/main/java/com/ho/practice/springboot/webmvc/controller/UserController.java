@@ -2,6 +2,7 @@ package com.ho.practice.springboot.webmvc.controller;
 
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.Link;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,6 +30,16 @@ public class UserController {
 		userModel.add(new Link("/users"));
 		
 		return userModel;
+	}
+	
+	@CrossOrigin(origins = "http://localhost:8082")
+	@GetMapping("/users/1")
+	public User getUser1() {
+		User user = new User();
+		user.setUsername("hosung1");
+		user.setPassword("111");
+		
+		return user;
 	}
 	
 	@PostMapping("/users")

@@ -17,4 +17,5 @@ public class ViewController {
 		model.addAttribute("name", "hosung");
 		return "hello";
 	}
+	
 }
