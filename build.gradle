@@ -40,7 +40,8 @@ dependencies {
 	// JDBC 추가
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	// runtimeOnly 'com.h2database:h2'
-	implementation 'mysql:mysql-connector-java'
+	// implementation 'mysql:mysql-connector-java'
+	implementation 'org.postgresql:postgresql'
 }
 
 test {

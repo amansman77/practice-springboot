@@ -24,16 +24,17 @@ public class DatabaseRunner implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		try(Connection connection = dataSource.getConnection()) {
-			System.out.println("URL: " + connection.getClass());
+			System.out.println("Connection Pool: " + connection.getClass());
+			System.out.println("Driver: " + connection.getMetaData().getDriverName());
 			System.out.println("URL: " + connection.getMetaData().getURL());
 			System.out.println("User name: " + connection.getMetaData().getUserName());
 			
 			Statement statement = connection.createStatement();
-			String sql = "CREATE TABLE USER(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
+			String sql = "CREATE TABLE USERS(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
 			statement.executeUpdate(sql);
 		}
 		
-		jdbcTemplate.execute("INSERT INTO USER VALUES (1, 'hosung')");
+		jdbcTemplate.execute("INSERT INTO USERS VALUES (1, 'hosung')");
 	}
 
 }
