@@ -9,17 +9,15 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class DatabaseRunner implements ApplicationRunner {
 
 	@Autowired
 	DataSource dataSource;
 	
 	@Autowired
-	JdbcTemplate jdbcTemplate;
+//	JdbcTemplate jdbcTemplate;
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
@@ -34,7 +32,7 @@ public class DatabaseRunner implements ApplicationRunner {
 			statement.executeUpdate(sql);
 		}
 		
-		jdbcTemplate.execute("INSERT INTO USERS VALUES (1, 'hosung')");
+//		jdbcTemplate.execute("INSERT INTO USERS VALUES (1, 'hosung')");
 	}
 
 }

@@ -9,7 +9,7 @@ public class PracticeSpringbootDataApplication {
 
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(PracticeSpringbootDataApplication.class);
-		app.setWebApplicationType(WebApplicationType.SERVLET);
+		app.setWebApplicationType(WebApplicationType.NONE);
 		app.run(args);
 	}
 

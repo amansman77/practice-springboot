@@ -38,10 +38,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 	
 	// JDBC 추가
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	// implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	// runtimeOnly 'com.h2database:h2'
 	// implementation 'mysql:mysql-connector-java'
-	implementation 'org.postgresql:postgresql'
+	// implementation 'org.postgresql:postgresql'
+	
+	// Redis 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 }
 
 test {
