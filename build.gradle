@@ -17,6 +17,7 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	
 	// WebClient를 사용하기 위해 추가
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
@@ -44,7 +45,11 @@ dependencies {
 	// implementation 'org.postgresql:postgresql'
 	
 	// Redis 의존성 추가
-	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	// implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	
+	// MongoDB 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
 }
 
 test {

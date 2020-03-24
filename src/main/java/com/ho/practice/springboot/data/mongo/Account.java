@@ -1,9 +1,12 @@
-package com.ho.practice.springboot.data.redis;
+package com.ho.practice.springboot.data.mongo;
 
-//@RedisHash("accounts")
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "accounts")
 public class Account {
 
-//	@Id
+	@Id
 	private String id;
 	private String username;
 	private String email;
