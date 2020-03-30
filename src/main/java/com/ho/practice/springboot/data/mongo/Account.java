@@ -1,9 +1,8 @@
 package com.ho.practice.springboot.data.mongo;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "accounts")
+//@Document(collection = "accounts")
 public class Account {
 
 	@Id

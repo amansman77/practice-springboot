@@ -48,8 +48,11 @@ dependencies {
 	// implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	
 	// MongoDB 의존성 추가
-	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-	testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+	// implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	// testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+	
+	// Neo4j 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-neo4j'
 }
 
 test {
