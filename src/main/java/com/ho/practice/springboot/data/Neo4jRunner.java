@@ -6,13 +6,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.stereotype.Component;
 
 import com.ho.practice.springboot.data.neo4j.Account;
 import com.ho.practice.springboot.data.neo4j.AccountNeo4jRepository;
 import com.ho.practice.springboot.data.neo4j.Role;
 
-@Component
+//@Component
 public class Neo4jRunner implements ApplicationRunner {
 	
 //	@Autowired
@@ -41,8 +40,8 @@ public class Neo4jRunner implements ApplicationRunner {
 		account2.setUsername("user2");
 		account2.getRoles().add(role);
 		
-		accountRepository.save(account);
-		accountRepository.save(account2);
+//		accountRepository.save(account);
+//		accountRepository.save(account2);
 		
 		List<Account> findByUsername = accountRepository.findByUsername("user2");
 		

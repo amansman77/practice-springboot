@@ -1,11 +1,9 @@
 package com.ho.practice.springboot.data.mongo;
 
-import org.springframework.data.annotation.Id;
-
 //@Document(collection = "accounts")
 public class Account {
 
-	@Id
+//	@Id
 	private String id;
 	private String username;
 	private String email;

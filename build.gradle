@@ -52,7 +52,12 @@ dependencies {
 	// testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
 	
 	// Neo4j 의존성 추가
-	implementation 'org.springframework.boot:spring-boot-starter-data-neo4j'
+	// implementation 'org.springframework.boot:spring-boot-starter-data-neo4j'
+	// !JDBC 추가
+	
+	// Spring Security 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	testImplementation 'org.springframework.security:spring-security-test'
 }
 
 test {

@@ -1,13 +1,9 @@
 package com.ho.practice.springboot.data.neo4j;
 
-import org.neo4j.ogm.annotation.GeneratedValue;
-import org.neo4j.ogm.annotation.Id;
-import org.neo4j.ogm.annotation.NodeEntity;
-
-@NodeEntity
+//@NodeEntity
 public class Role {
 
-	@Id @GeneratedValue
+//	@Id @GeneratedValue
 	private Long id;
 	private String name;
 	
