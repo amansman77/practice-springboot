@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
-import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 @WebMvcTest
@@ -19,7 +18,7 @@ class ViewControllerTest {
 	MockMvc mockMvc;
 	
 	@Test
-	@WithMockUser
+//	@WithMockUser
 	void testHello() throws Exception {
 		mockMvc.perform(get("/hello")
 				.accept(MediaType.TEXT_HTML))
@@ -29,7 +28,7 @@ class ViewControllerTest {
 	}
 	
 	@Test
-	@WithMockUser
+//	@WithMockUser
 	void testMy() throws Exception {
 		mockMvc.perform(get("/my"))
 			.andDo(print())

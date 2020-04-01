@@ -1,13 +1,9 @@
 package com.ho.practice.springboot.security;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
+//@Entity
 public class Account {
 
-	@Id @GeneratedValue
+//	@Id @GeneratedValue
 	private Long id;
 	private String username;
 	private String password;

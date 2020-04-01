@@ -33,6 +33,10 @@ Spring Boot를 연습하는 공간입니다.
 
 `com.ho.practice.springboot.security`에 구현
 
+## Rest Client 예제
+
+`com.ho.practice.springboot.restclient`에 구현
+
 ## Troubleshooting
 
 ### JUnit 테스트 환경에서 Test resource가 동작하지 않음
