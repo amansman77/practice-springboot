@@ -59,6 +59,9 @@ dependencies {
 	// Spring Security 의존성 추가
 	// implementation 'org.springframework.boot:spring-boot-starter-security'
 	// testImplementation 'org.springframework.security:spring-security-test'
+	
+	// Apache http client 종속성 추가
+	// implementation 'org.apache.httpcomponents:httpclient:4.5.12'
 }
 
 test {
