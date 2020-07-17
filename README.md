@@ -2,7 +2,7 @@
 Spring Boot를 연습하는 공간입니다.
 
 ## 개발 프레임워크
-- IDE : STS-4.5.1.RELEASE
+- IDE : VSCode-win32-x64-1.46.1
 - Java : openjdk-12.0.1 (JavaSE-11)
 - Springboot : 2.2.4.RELEASE
 - Gradle : 6.0.1
@@ -23,6 +23,8 @@ Spring Boot를 연습하는 공간입니다.
 예제 목록
 - HATEOAS
 - HTML Unit : HTML의 테스트를 다양하게 할 수 있도록 지원
+- `thymeleaf`를 활용한 동적뷰
+  - `resources/templates`의 파일들이 위치
 - ...
 
 ## Spring data 예제
@@ -36,6 +38,25 @@ Spring Boot를 연습하는 공간입니다.
 ## Rest Client 예제
 
 `com.ho.practice.springboot.restclient`에 구현
+
+## File Upload / Download 예제
+
+`com.ho.practice.springboot.file`에 구현
+
+### Controller 추가
+
+`FileController`에 `POST`컨트롤러 추가
+
+### 웹 페이지 추가
+
+`resources/index.html` 추가
+
+### application.properties 설정
+
+```properties
+spring.servlet.multipart.maxFileSize: 10MB
+spring.servlet.multipart.maxRequestSize: 10MB
+```
 
 ## Troubleshooting
 
