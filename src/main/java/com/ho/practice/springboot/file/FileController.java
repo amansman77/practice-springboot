@@ -11,8 +11,8 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileController {
     
     @PostMapping(value="")
-	public String saveSell(@RequestParam("myFile") MultipartFile files) { 
-		System.out.println(files.getOriginalFilename());
+	public String saveFile(@RequestParam("myFile") MultipartFile file) { 
+		System.out.println("File name: " + file.getOriginalFilename());
         
 		return "success"; 
 	}
