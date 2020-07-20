@@ -1,6 +1,5 @@
 package com.ho.practice.springboot.file;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -39,7 +38,6 @@ public class FileControllerTest {
                 multipart(serviceUrl).file(file)
             )
             .andDo(print());
-        assertThat(true).isTrue();
 
         //then
         actions
