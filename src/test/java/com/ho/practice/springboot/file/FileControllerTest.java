@@ -1,8 +1,10 @@
 package com.ho.practice.springboot.file;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.nio.charset.StandardCharsets;
@@ -24,7 +26,7 @@ public class FileControllerTest {
     private static final String serviceUrl ="/files";
 
     @Test
-    public void testSaveFile() throws Exception {
+    public void testUploadFile() throws Exception {
         // given
         MockMultipartFile file =
             new MockMultipartFile(
@@ -43,6 +45,22 @@ public class FileControllerTest {
         actions
             .andExpect(status().isOk())
             .andExpect(content().string("success"))
+            ;
+    }
+
+    @Test
+    public void testDownloadFile() throws Exception {
+        // given
+
+        // when
+        ResultActions actions = mockMvc.perform(get(serviceUrl))
+            .andDo(print());
+            
+        //then
+        actions
+            .andExpect(status().isOk())
+            .andExpect(header().string("Content-Type", "text/csv;charset=UTF-8"))
+            .andExpect(header().string("Content-disposition", "attachment; filename=sample.zip"))
             ;
     }
 
