@@ -59,7 +59,7 @@ public class FileControllerTest {
         //then
         actions
             .andExpect(status().isOk())
-            .andExpect(header().string("Content-Type", "text/csv;charset=UTF-8"))
+            .andExpect(header().string("Content-Type", "application/zip"))
             .andExpect(header().string("Content-disposition", "attachment; filename=sample.zip"))
             ;
     }

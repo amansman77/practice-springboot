@@ -35,7 +35,7 @@ public class FileController {
 			File file = new File("src/main/resources/data/movie.zip");
 			is = new FileInputStream(file);
 		
-        	response.setContentType("text/csv;charset=UTF-8");
+        	response.setContentType("application/zip");
 			response.setHeader("Content-disposition", "attachment; filename="+ "sample.zip");
 	    	
 			ServletOutputStream outputStream = response.getOutputStream();
