@@ -58,6 +58,10 @@ spring.servlet.multipart.maxFileSize: 10MB
 spring.servlet.multipart.maxRequestSize: 10MB
 ```
 
+### 유틸 추가
+
+`FileUtils`에 파일관련 예제 추가
+
 ## Troubleshooting
 
 ### JUnit 테스트 환경에서 Test resource가 동작하지 않음
